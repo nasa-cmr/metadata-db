@@ -62,7 +62,7 @@
   [provider table-name]
   (format (str "CONSTRAINT %s_pk PRIMARY KEY (id), "
 
-            ;; Unique constraint on native id and revision id
+            ;; Unique constraint on provider id, native id and revision id
             "CONSTRAINT %s_con_rev
             UNIQUE (provider_id, native_id, revision_id)
             USING INDEX (create unique index %s_ucr_i
